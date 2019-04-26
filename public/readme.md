@@ -2,7 +2,8 @@
 
 **Note**
 This is the first time I've used Postgres and if there are somethings that feels far from optimal, I'd like to hear it in feedback.
-
+Also, I truncated the .sql file that I found in the repo mentioned in assignment problem.
+Link to truncated file https://s3.ap-south-1.amazonaws.com/fyass/indian_banks.sql.
 ### SETUP
 You can not run this locally because I've used Heroku postgres and to connect apps outside of heroku, we need SSL.
 
