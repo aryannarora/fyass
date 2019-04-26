@@ -1,5 +1,4 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const {log} = require('./utils');
 const router = require('./routes');
 const serveStatic = require('serve-static');
@@ -10,16 +9,6 @@ const app = express();
 app.use(serveStatic('public/', {'index': 'readme.md'}));
 
 require('dotenv/config');
-
-// parse application/x-www-form-urlencoded
-// for easier testing with Postman or plain HTML forms
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-
-// parse application/json
-app.use(bodyParser.json());
-
 
 
 app.use('/', router.rootRouter);
