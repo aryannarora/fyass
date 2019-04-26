@@ -13,8 +13,14 @@ router.use((req, res, next) => {
 
 
 router.get('/:ifsc', async (req, res) => {
-    const { ifsc } = req.params;
-    const { rows } = await db.query(`SELECT * FROM ${constants.db.branches} WHERE ifsc = $1`, [ifsc]);
+    const {ifsc} = req.params;
+    const {rows} = await db.query(`SELECT * FROM ${constants.db.branches} WHERE ifsc = $1`, [ifsc]);
+    res.json(rows);
+});
+
+router.get('/:bank/:city', async (req, res) => {
+    const {bank, city} = req.params;
+    const {rows} = await db.query(`SELECT * FROM ${constants.db.bank_branches} WHERE bank_name = $1 and city= $2`, [bank, city]);
     res.json(rows);
 });
 
