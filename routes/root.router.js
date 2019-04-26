@@ -11,7 +11,7 @@ router.use((req, res, next) => {
 });
 
 
-router.get('/:id', async (req, res) => {
+router.get('/:ifsc', async (req, res) => {
     const { ifsc } = req.params;
     const { rows } = await db.query(`SELECT * FROM ${constants.db.branches} WHERE ifsc = $1`, [ifsc]);
     res.json(rows);
