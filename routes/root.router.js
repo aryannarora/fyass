@@ -1,5 +1,6 @@
 const {Router} = require("express");
 const db = require('./../db');
+const {log} = require('./../utils');
 const constants = require('./../constants');
 
 const router = Router();
