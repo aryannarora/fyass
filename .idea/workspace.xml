@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7f615ed-7773-45c3-8bfb-1526d3b83ea1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PM.log" beforeDir="false" afterPath="$PROJECT_DIR$/PM.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,7 +44,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="10" />
-          <entry key="gitignore" value="21" />
+          <entry key="gitignore" value="23" />
           <entry key="js" value="526" />
           <entry key="json" value="8" />
           <entry key="md" value="993" />
@@ -58,7 +56,7 @@
           <entry key="JSON" value="8" />
           <entry key="JavaScript" value="526" />
           <entry key="Markdown" value="993" />
-          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="PLAIN_TEXT" value="33" />
           <entry key="SQL" value="3" />
         </counts>
       </usages-collector>
@@ -97,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+              <caret line="1" column="6" lean-forward="true" selection-end-line="1" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -261,12 +259,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556263427601</updated>
-      <workItem from="1556263443415" duration="9671000" />
+      <workItem from="1556263443415" duration="9955000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9671000" />
+    <option name="totallyTimeSpent" value="9955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="0" width="1312" height="768" extended-state="6" />
@@ -274,11 +272,11 @@
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980605" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24980605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3291536" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -413,7 +411,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <caret line="1" column="6" lean-forward="true" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
