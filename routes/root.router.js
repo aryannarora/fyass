@@ -13,7 +13,7 @@ router.use((req, res, next) => {
 
 
 router.get('/branch', async (req, res, next) => {
-    const ifsc = (req.query.ifsc || '').toUpperCase();
+    const ifsc = (req.query.ifsc || '').trim().toUpperCase();
     if (ifsc.length === 0) return next(constants.ERRORS.MISSING_IFSC);
     const {rows} = await db.query(`SELECT * FROM ${constants.db.branches} WHERE ifsc = $1`, [ifsc]);
     res.json(rows);
@@ -21,8 +21,8 @@ router.get('/branch', async (req, res, next) => {
 
 router.get('/bank', async (req, res, next) => {
     let {bank_name, city} = req.query;
-    bank_name = (bank_name || '').toUpperCase();
-    city = (city || '').toUpperCase();
+    bank_name = (bank_name || '').trim().toUpperCase();
+    city = (city || '').trim().toUpperCase();
 
     if (bank_name.length === 0) return next(constants.ERRORS.MISSING_BANK);
     if (city.length === 0) return next(constants.ERRORS.MISSING_CITY);
