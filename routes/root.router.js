@@ -20,14 +20,14 @@ router.get('/branch', async (req, res, next) => {
 });
 
 router.get('/bank', async (req, res, next) => {
-    let {bank, city} = req.query;
-    bank = (bank || '').toUpperCase();
+    let {bank_name, city} = req.query;
+    bank_name = (bank_name || '').toUpperCase();
     city = (city || '').toUpperCase();
 
-    if (bank.length === 0) return next(constants.ERRORS.MISSING_BANK);
+    if (bank_name.length === 0) return next(constants.ERRORS.MISSING_BANK);
     if (city.length === 0) return next(constants.ERRORS.MISSING_CITY);
 
-    const {rows} = await db.query(`SELECT * FROM ${constants.db.bank_branches} WHERE bank_name = $1 and city= $2`, [bank, city]);
+    const {rows} = await db.query(`SELECT * FROM ${constants.db.bank_branches} WHERE bank_name = $1 and city= $2`, [bank_name, city]);
     res.json(rows);
 });
 
