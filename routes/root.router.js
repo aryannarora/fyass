@@ -12,16 +12,21 @@ router.use((req, res, next) => {
 });
 
 
-router.get('/:ifsc', async (req, res) => {
-    const {ifsc} = req.params;
-    const {rows} = await db.query(`SELECT * FROM ${constants.db.branches} WHERE ifsc = $1`, [ifsc.toUpperCase()]);
+router.get('/branch', async (req, res, next) => {
+    const ifsc = (req.query.ifsc || '').toUpperCase();
+    if (ifsc.length === 0) return next(constants.ERRORS.MISSING_IFSC);
+    const {rows} = await db.query(`SELECT * FROM ${constants.db.branches} WHERE ifsc = $1`, [ifsc]);
     res.json(rows);
 });
 
-router.get('/:bank/:city', async (req, res) => {
-    let {bank, city} = req.params;
-    bank = bank.toUpperCase();
-    city = city.toUpperCase();
+router.get('/bank', async (req, res, next) => {
+    let {bank, city} = req.query;
+    bank = (bank || '').toUpperCase();
+    city = (city || '').toUpperCase();
+
+    if (bank.length === 0) return next(constants.ERRORS.MISSING_BANK);
+    if (city.length === 0) return next(constants.ERRORS.MISSING_CITY);
+
     const {rows} = await db.query(`SELECT * FROM ${constants.db.bank_branches} WHERE bank_name = $1 and city= $2`, [bank, city]);
     res.json(rows);
 });
