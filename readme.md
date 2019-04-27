@@ -29,19 +29,23 @@ All the files are commented as needed and variables names are explanatory.
 ### Instructions for Routes
 
 
-1. For /:ifsc
+1. For /branch
 
 METHOD - GET
 
-PARAMS - 
+Query PARAMS - 
 
     ifsc @String
+    
+    e.g https://fyass.herokuapp.com/branch?ifsc=ADCC0000070
 
-2.For /:bank/:city
+2.For /bank
   
   METHOD - GET
   
-  PARAMS - 
+  Query PARAMS - 
     
-    bank @String
+    bank_name @String
     city @String
+    
+    e.g https://fyass.herokuapp.com/bank?bank_name=STATE%20BANK%20OF%20INDIA&city=BANGALORE
